@@ -3,7 +3,7 @@ pipeline:
     image: node
     commands:
       - npm install
-      - npm test:e2e
+      - npm run test:e2e
   publish:
     image: plugins/docker
     repo: drone/node-demo
