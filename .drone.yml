@@ -4,9 +4,8 @@ pipeline:
     commands:
       - npm install
       - npm test
-      - npm test:e2e
   publish:
     image: plugins/docker
     repo: drone/node-demo
     secrets: [ docker_username, docker_password ]
-    dry_run: true # remove this to publish image 
+    dry_run: true # remove this to publish
