@@ -4,7 +4,8 @@
   "description": "An example NodeJS repo with Drone test/build",
   "main": "server.js",
   "scripts": {
-    "test": "mocha -R spec spec.js"
+    "test": "mocha -R spec spec.js",
+    "test:e2e": "cypress run -s cypress/integration/**/*.spec.js -b chrome --headless"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "cypress": "^7.0.1",
     "mocha": "^5.2.0",
     "supertest": "^3.1.0"
   }
